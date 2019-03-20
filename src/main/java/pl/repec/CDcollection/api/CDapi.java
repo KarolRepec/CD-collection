@@ -22,6 +22,11 @@ public class CDapi {
     public CDapi() {
     }
 
+    @GetMapping("/testAdmin")
+    public String testAdmin() {
+        return "You're at test admin page";
+    }
+
     @GetMapping("/all")
     public Iterable<CD> getAll() {
         return cdCollection.findAll();
